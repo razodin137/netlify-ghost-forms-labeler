@@ -16,11 +16,14 @@ exports.handler = async (event) => {
         };
     }
 
-    const api = new AdminAPI({
-        url: process.env.GHOST_ADMIN_URL,
-        key: process.env.GHOST_ADMIN_API_KEY,
-        version: 'v5.0'
-    });
+const ghostAdmin = require('@tryghost/admin-api');
+
+const api = ghostAdmin({
+  url: process.env.GHOST_ADMIN_URL,
+  key: process.env.GHOST_ADMIN_API_KEY,
+  version: 'v5.0'
+});
+
 
     try {
         await api.members.add({
