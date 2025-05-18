@@ -1,4 +1,4 @@
-const { AdminAPI } = require('@tryghost/admin-api');
+const AdminAPI = require('@tryghost/admin-api');
 
 exports.handler = async (event) => {
     if (event.httpMethod !== 'POST') {
