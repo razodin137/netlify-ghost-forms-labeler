@@ -1,0 +1,11 @@
+{
+  "name": "ghost-netlify-member-form",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "@tryghost/admin-api": "^1.11.6"
+  }
+}
+
